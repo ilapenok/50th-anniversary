@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ru" data-theme="sunset">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Приглашение на юбилей — 50 лет | 18 октября 2025</title>
+  <meta name="description" content="Приглашение на юбилей — 50 лет. 18 октября 2025 в 16:00, Ресторан Гостиницы Самсон, Петергоф, Санкт-Петербургский проспект, 44А." />
+  <meta property="og:title" content="Приглашение на юбилей — 50 лет" />
+  <meta property="og:description" content="18 октября 2025 в 16:00, Ресторан Гостиницы Самсон (Петергоф)." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="" />
+  <meta name="theme-color" content="#fff1f2" />
+  <style>
+    :root{
+      --bg1:#fff1f2; --bg2:#fef3c7;
+      --fg:#374151; --muted:#6b7280;
+      --acc1:#fb7185; --acc2:#f59e0b;
+      --card:#ffffffcc; --radius:28px; --shadow:0 8px 28px rgba(0,0,0,.08);
+      --tile-bg:rgba(251,113,133,.12); --tile-brd:rgba(251,113,133,.28);
+      --btn-text:#111827;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0; font-family:system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; color:var(--fg);
+      background:linear-gradient(160deg,var(--bg1),var(--bg2));}
+    .wrap{display:flex;min-height:100dvh;align-items:center;justify-content:center;padding:24px}
+    .card{width:min(880px,100%);background:var(--card);
+      backdrop-filter: blur(14px); border-radius:var(--radius); box-shadow:var(--shadow);
+      overflow:hidden; padding:32px 28px; position:relative}
+    header{text-align:center;margin-bottom:24px}
+    header .badge{display:inline-flex;gap:8px;align-items:center;padding:6px 14px;border-radius:999px;background:var(--acc1);
+      color:#fff;font-weight:700; font-size:14px}
+    h1{font-size:clamp(28px,3vw,44px);margin:14px 0 8px;line-height:1.2;color:#111827}
+    .subtitle{font-size:18px;color:var(--muted)}
+    .greeting{max-width:680px;margin:16px auto 0;padding:14px 18px;border-left:4px solid var(--acc2);background:rgba(0,0,0,.04);border-radius:12px;font-size:16px;line-height:1.5}
+    .grid{display:grid;grid-template-columns:1fr 1fr; gap:20px;}
+    @media (max-width:780px){.grid{grid-template-columns:1fr}}
+    .panel{background:#fff; border-radius:20px; padding:20px; box-shadow:0 2px 12px rgba(0,0,0,.05)}
+    .panel h2{margin:0 0 12px; font-size:20px; color:#1f2937}
+    .detail{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px dashed #e5e7eb}
+    .detail:last-child{border-bottom:none}
+    .ico{font-size:20px;line-height:1.2}
+    .detail strong{display:block}
+    .detail span{color:var(--muted)}
+    .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+    .btn{appearance:none;border:none;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:10px;
+      padding:12px 18px;border-radius:12px;background:var(--acc2); color:var(--btn-text); font-weight:600; font-size:15px; box-shadow:0 2px 6px rgba(0,0,0,.1)}
+    .btn:hover{filter:brightness(1.03)}
+    .btn.primary{background:var(--acc1); color:#fff}
+    .map{border:0;width:100%;height:320px;border-radius:14px;box-shadow:0 2px 12px rgba(0,0,0,.05)}
+    footer{text-align:center;margin-top:28px;color:var(--muted);font-size:14px}
+    footer strong{color:#374151}
+    .countdown{font-variant-numeric:tabular-nums;display:flex;gap:10px;justify-content:center;margin-top:14px}
+    .tile{background:var(--tile-bg); border:1px solid var(--tile-brd); padding:12px 14px; border-radius:12px; min-width:70px}
+    .tile .num{font-size:20px; font-weight:700;color:#1f2937}
+    .tile .lbl{font-size:12px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="badge">ЮБИЛЕЙ · 50 ЛЕТ</div>
+        <h1>Приглашение на юбилей<br>18 октября 2025</h1>
+        <p class="subtitle">Буду <strong>рад</strong> видеть вас на празднике! Начинаем в <strong>16:00</strong>.</p>
+        <p class="greeting">Друзья, приглашаю вас разделить со мной тёплый вечер в честь моего 50‑летия. Будет уютно, вкусно и по‑семейному — очень жду встречи!</p>
+        <div class="countdown" id="countdown"></div>
+      </header>
+      <section class="grid">
+        <div class="panel">
+          <h2>Детали мероприятия</h2>
+          <div class="detail"><div class="ico">🗓️</div><div><strong>Суббота, 18 октября 2025</strong><span>Сбор гостей в 16:00 (по московскому времени)</span></div></div>
+          <div class="detail"><div class="ico">📍</div><div><strong>Ресторан Гостиницы «Самсон»</strong><span>Петергоф, Санкт-Петербургский проспект, 44А</span></div></div>
+          <div class="btns">
+            <a class="btn primary" id="icsBtn" download="jubilee-50-2025-10-18.ics" href="#">Добавить в календарь</a>
+            <a class="btn" target="_blank" rel="noopener" href="https://yandex.ru/maps/?text=%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B3%D0%BE%D1%84%2C%20%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%2C%2044%D0%90%20%D0%A0%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%20%D0%A1%D0%B0%D0%BC%D1%81%D0%BE%D0%BD">Открыть в Яндекс.Картах</a>
+          </div>
+        </div>
+        <div class="panel"><h2>Как добраться</h2>
+          <iframe class="map" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+            src="https://yandex.ru/map-widget/v1/?text=%D0%A0%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%20%D0%A1%D0%B0%D0%BC%D1%81%D0%BE%D0%BD%2C%20%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B3%D0%BE%D1%84%2C%20%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B3%D0%B1%D1%83%D1%80%D0%B3%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%2C%2044%D0%90"></iframe>
+        </div>
+      </section>
+      <footer>
+        <div>До встречи на празднике! 🎉</div>
+        <div style="margin-top:8px">С уважением, <strong>Игорь Лапенок</strong></div>
+      </footer>
+    </div>
+  </div>
+  <script>
+    const eventISO = '2025-10-18T16:00:00+03:00';
+    function pad(n){return String(n).padStart(2,'0')}
+    function renderCountdown(el){
+      const now = new Date(); const target = new Date(eventISO); const diff = target - now;
+      const d = Math.floor(Math.max(diff,0)/(1000*60*60*24));
+      const h = Math.floor((diff/(1000*60*60))%24);
+      const m = Math.floor((diff/(1000*60))%60);
+      const s = Math.floor((diff/1000)%60);
+      el.innerHTML=`<div class='tile'><div class='num'>${pad(d)}</div><div class='lbl'>дней</div></div>
+      <div class='tile'><div class='num'>${pad(h)}</div><div class='lbl'>часов</div></div>
+      <div class='tile'><div class='num'>${pad(m)}</div><div class='lbl'>минут</div></div>
+      <div class='tile'><div class='num'>${pad(s)}</div><div class='lbl'>секунд</div></div>`;}
+    const c1=document.getElementById('countdown'); renderCountdown(c1); setInterval(()=>renderCountdown(c1),1000);
+    (function(){
+      const title='Юбилей — 50 лет'; const loc='Ресторан Гостиницы «Самсон», Петергоф, Санкт-Петербургский проспект, 44А';
+      const start='20251018T130000Z'; const end='20251018T180000Z'; const uid=Date.now()+'@invite';
+      const stamp=new Date().toISOString().replace(/[-:]/g,'').split('.')[0]+'Z';
+      const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Birthday Invite//RU','CALSCALE:GREGORIAN','METHOD:PUBLISH','BEGIN:VEVENT','DTSTAMP:'+stamp,'UID:'+uid,'DTSTART:'+start,'DTEND:'+end,'SUMMARY:'+title,'LOCATION:'+loc,'DESCRIPTION:Приглашаю на мой юбилей — 50 лет! Начало в 16:00 по московскому времени.','END:VEVENT','END:VCALENDAR'].join('\r\n');
+      const blob=new Blob([ics],{type:'text/calendar'}); const url=URL.createObjectURL(blob);
+      document.getElementById('icsBtn').href=url;})();
+  </script>
+</body>
+</html>
