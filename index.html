@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Приглашение на юбилей — 50 лет | 18 октября 2025</title>
-  <meta name="description" content="Приглашение на юбилей — 50 лет. 18 октября 2025 в 16:00, Ресторан Гостиницы Самсон, Петергоф, Санкт-Петербургский проспект, 44А." />
+  <meta name="description" content="Приглашение на юбилей — 50 лет. 18 октября 2025 в 16:00, Ресторан Porto Positano, Петергоф, Санкт-Петербургский проспект, 44А." />
   <meta property="og:title" content="Приглашение на юбилей — 50 лет" />
-  <meta property="og:description" content="18 октября 2025 в 16:00, Ресторан Гостиницы Самсон (Петергоф)." />
+  <meta property="og:description" content="18 октября 2025 в 16:00, Ресторан Porto Positano (Петергоф)." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="" />
   <meta name="theme-color" content="#fff1f2" />
@@ -70,15 +70,15 @@
         <div class="panel">
           <h2>Детали мероприятия</h2>
           <div class="detail"><div class="ico">🗓️</div><div><strong>Суббота, 18 октября 2025</strong><span>Сбор гостей в 16:00 (по московскому времени)</span></div></div>
-          <div class="detail"><div class="ico">📍</div><div><strong>Ресторан «Porto Positano»</strong><span>Петергоф, Санкт-Петербургский проспект, 44А</span></div></div>
+          <div class="detail"><div class="ico">📍</div><div><strong>Ресторан Porto Positano</strong><span>Петергоф, Санкт-Петербургский проспект, 44А</span></div></div>
           <div class="btns">
             <a class="btn primary" id="icsBtn" download="jubilee-50-2025-10-18.ics" href="#">Добавить в календарь</a>
-            <a class="btn" target="_blank" rel="noopener" href="https://yandex.ru/maps/?text=%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B3%D0%BE%D1%84%2C%20%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%2C%2044%D0%90%20%D0%A0%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%20%D0%A1%D0%B0%D0%BC%D1%81%D0%BE%D0%BD">Открыть в Яндекс.Картах</a>
+            <a class="btn" target="_blank" rel="noopener" href="https://yandex.ru/maps/?text=Porto%20Positano%2C%20%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B3%D0%BE%D1%84%2C%20%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%2C%2044%D0%90">Открыть в Яндекс.Картах</a>
           </div>
         </div>
         <div class="panel"><h2>Как добраться</h2>
           <iframe class="map" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
-            src="https://yandex.ru/map-widget/v1/?text=%D0%A0%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%20%D0%A1%D0%B0%D0%BC%D1%81%D0%BE%D0%BD%2C%20%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B3%D0%BE%D1%84%2C%20%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B3%D0%B1%D1%83%D1%80%D0%B3%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%2C%2044%D0%90"></iframe>
+            src="https://yandex.ru/map-widget/v1/?text=Porto%20Positano%2C%20%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B3%D0%BE%D1%84%2C%20%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B3%D0%B1%D1%83%D1%80%D0%B3%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%2C%2044%D0%90"></iframe>
         </div>
       </section>
       <footer>
@@ -91,23 +91,39 @@
     const eventISO = '2025-10-18T16:00:00+03:00';
     function pad(n){return String(n).padStart(2,'0')}
     function renderCountdown(el){
-      const now = new Date(); const target = new Date(eventISO); const diff = target - now;
-      const d = Math.floor(Math.max(diff,0)/(1000*60*60*24));
-      const h = Math.floor((diff/(1000*60*60))%24);
-      const m = Math.floor((diff/(1000*60))%60);
-      const s = Math.floor((diff/1000)%60);
-      el.innerHTML=`<div class='tile'><div class='num'>${pad(d)}</div><div class='lbl'>дней</div></div>
-      <div class='tile'><div class='num'>${pad(h)}</div><div class='lbl'>часов</div></div>
-      <div class='tile'><div class='num'>${pad(m)}</div><div class='lbl'>минут</div></div>
-      <div class='tile'><div class='num'>${pad(s)}</div><div class='lbl'>секунд</div></div>`;}
-    const c1=document.getElementById('countdown'); renderCountdown(c1); setInterval(()=>renderCountdown(c1),1000);
+      const now = new Date();
+      const target = new Date(eventISO);
+      const diff = target - now;
+      const clamp = Math.max(diff, 0);
+      const days = Math.floor(clamp / (1000*60*60*24));
+      const hours = Math.floor((clamp / (1000*60*60)) % 24);
+      const mins = Math.floor((clamp / (1000*60)) % 60);
+      const secs = Math.floor((clamp / 1000) % 60);
+      el.innerHTML = `
+        <div class="tile"><div class="num">${pad(days)}</div><div class="lbl">дней</div></div>
+        <div class="tile"><div class="num">${pad(hours)}</div><div class="lbl">часов</div></div>
+        <div class="tile"><div class="num">${pad(mins)}</div><div class="lbl">минут</div></div>
+        <div class="tile"><div class="num">${pad(secs)}</div><div class="lbl">секунд</div></div>`;
+    }
+    const c1 = document.getElementById('countdown');
+    renderCountdown(c1);
+    setInterval(()=>{renderCountdown(c1)}, 1000);
     (function(){
-      const title='Юбилей — 50 лет'; const loc='Ресторан Гостиницы «Самсон», Петергоф, Санкт-Петербургский проспект, 44А';
-      const start='20251018T130000Z'; const end='20251018T180000Z'; const uid=Date.now()+'@invite';
-      const stamp=new Date().toISOString().replace(/[-:]/g,'').split('.')[0]+'Z';
-      const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Birthday Invite//RU','CALSCALE:GREGORIAN','METHOD:PUBLISH','BEGIN:VEVENT','DTSTAMP:'+stamp,'UID:'+uid,'DTSTART:'+start,'DTEND:'+end,'SUMMARY:'+title,'LOCATION:'+loc,'DESCRIPTION:Приглашаю на мой юбилей — 50 лет! Начало в 16:00 по московскому времени.','END:VEVENT','END:VCALENDAR'].join('\r\n');
-      const blob=new Blob([ics],{type:'text/calendar'}); const url=URL.createObjectURL(blob);
-      document.getElementById('icsBtn').href=url;})();
+      const title = 'Юбилей — 50 лет';
+      const loc = 'Ресторан Porto Positano, Петергоф, Санкт-Петербургский проспект, 44А';
+      const start = '20251018T130000Z';
+      const end   = '20251018T180000Z';
+      const uid   = Date.now() + '@invite';
+      const stamp = new Date().toISOString().replace(/[-:]/g,'').split('.')[0] + 'Z';
+      const ics = [
+        'BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Birthday Invite//RU','CALSCALE:GREGORIAN','METHOD:PUBLISH','BEGIN:VEVENT',
+        'DTSTAMP:' + stamp,'UID:' + uid,'DTSTART:' + start,'DTEND:' + end,'SUMMARY:' + title,'LOCATION:' + loc,
+        'DESCRIPTION:Приглашаю на мой юбилей — 50 лет! Начало в 16:00 по московскому времени.','END:VEVENT','END:VCALENDAR'
+      ].join('\r\n');
+      const blob = new Blob([ics], {type:'text/calendar'});
+      const url = URL.createObjectURL(blob);
+      document.getElementById('icsBtn').href = url;
+    })();
   </script>
 </body>
 </html>
